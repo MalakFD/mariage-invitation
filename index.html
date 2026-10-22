@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Invitation de Mariage - Ahmed & Loubna</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Amiri&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
 
         .main-wrapper {
             width: 100%;
-            max-width: 480px;
+            max-width: 500px;
             min-height: 100vh;
             background-color: var(--bg-overlay);
             backdrop-filter: blur(6px);
@@ -43,7 +43,7 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            padding: 20px 15px;
+            padding: 0;
         }
 
         /* Hero / Envelope Screen */
@@ -54,6 +54,7 @@
             align-items: center;
             justify-content: center;
             min-height: 85vh;
+            padding: 20px 15px;
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
@@ -90,7 +91,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.28);
         }
 
-        /* Envelope Flap (Rabat supérieur triangulaire) */
+        /* Envelope Flap */
         .envelope-wrapper::before {
             content: '';
             position: absolute;
@@ -112,7 +113,7 @@
             width: 72px;
             height: 72px;
             background: radial-gradient(circle at 35% 35%, #f3e2af 0%, #c5a059 45%, #8c6827 85%, #594013 100%);
-            border-radius: 48% 52% 51% 49% / 53% 47% 53% 47%; /* Forme organique irrégulière */
+            border-radius: 48% 52% 51% 49% / 53% 47% 53% 47%;
             box-shadow: 
                 0 6px 15px rgba(0,0,0,0.4),
                 inset 0 2px 4px rgba(255,255,255,0.6),
@@ -129,7 +130,6 @@
             transform: scale(1.05);
         }
 
-        /* Rim inner detail */
         .wax-seal::after {
             content: '';
             position: absolute;
@@ -171,7 +171,7 @@
             display: block;
         }
 
-        /* Invitation Content */
+        /* Invitation Content - Plein Écran */
         .invitation-container {
             width: 100%;
             display: none;
@@ -184,10 +184,10 @@
 
         .invitation-card {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 0;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
         }
 
         .invitation-card img {
@@ -198,13 +198,13 @@
 
         /* RSVP Form Section */
         .rsvp-section {
-            width: 100%;
+            width: calc(100% - 30px);
             background: #ffffff;
             padding: 25px 20px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             border: 1px solid #e8e0d5;
-            margin-bottom: 30px;
+            margin: 0 15px 30px 15px;
             text-align: center;
         }
 
@@ -291,7 +291,7 @@
             </div>
         </div>
 
-        <!-- ÉCRAN 2 : Invitation & Formulaire RSVP -->
+        <!-- ÉCRAN 2 : Invitation Plein Écran & Formulaire RSVP -->
         <div class="invitation-container" id="invitationContainer">
             
             <!-- Carte d'invitation -->
